@@ -1,6 +1,7 @@
 # JavaScript API
 
 <!-- START JavaScript API -->
+
 ## Exported members
 
 ### Functions
@@ -45,7 +46,7 @@ build({
 
 `Promise`\<`void`\>
 
-***
+---
 
 ### init()
 
@@ -61,7 +62,7 @@ Initialize a new vivliostyle.config.js file.
 
 `Promise`\<`void`\>
 
-***
+---
 
 ### preview()
 
@@ -87,58 +88,59 @@ Open a preview of the publication.
 
 #### Properties
 
-| Property | Type | Description |
-| ------ | ------ | ------ |
-| `author?` | `string` | - |
-| `bleed?` | `string` | - |
-| `browser?` | `"chromium"` \| `"firefox"` \| `"webkit"` | - |
-| `bypassedPdfBuilderOption?` | `string` | - |
-| `configPath?` | `string` | - |
-| `cropMarks?` | `boolean` | - |
-| `cropOffset?` | `string` | - |
-| `css?` | `string` | - |
-| `executableBrowser?` | `string` | - |
-| ~~`executableChromium?`~~ | `string` | **Deprecated** |
-| `http?` | `boolean` | - |
-| `image?` | `string` | - |
-| `input?` | `string` | - |
-| `language?` | `string` | - |
-| `logLevel?` | `"silent"` \| `"info"` \| `"verbose"` \| `"debug"` | - |
-| `preflight?` | `"press-ready"` \| `"press-ready-local"` | - |
-| `preflightOption?` | `string`[] | - |
-| `pressReady?` | `boolean` | - |
-| `quick?` | `boolean` | - |
-| `readingProgression?` | `"ltr"` \| `"rtl"` | - |
-| `renderMode?` | `"local"` \| `"docker"` | - |
-| `sandbox?` | `boolean` | - |
-| `singleDoc?` | `boolean` | - |
-| `size?` | `string` | - |
-| `style?` | `string` | - |
-| `targets?` | `Pick`\<`OutputFormat`, `"path"` \| `"format"`\>[] | - |
-| `theme?` | `string` | - |
-| `timeout?` | `number` | - |
-| `title?` | `string` | - |
-| `userStyle?` | `string` | - |
-| ~~`verbose?`~~ | `boolean` | **Deprecated** |
-| `viewer?` | `string` | - |
-| `viewerParam?` | `string` | - |
+| Property                    | Type                                               | Description    |
+| --------------------------- | -------------------------------------------------- | -------------- |
+| `author?`                   | `string`                                           | -              |
+| `bleed?`                    | `string`                                           | -              |
+| `browser?`                  | `"chromium"` \| `"firefox"` \| `"webkit"`          | -              |
+| `bypassedPdfBuilderOption?` | `string`                                           | -              |
+| `configPath?`               | `string`                                           | -              |
+| `cropMarks?`                | `boolean`                                          | -              |
+| `cropOffset?`               | `string`                                           | -              |
+| `css?`                      | `string`                                           | -              |
+| `executableBrowser?`        | `string`                                           | -              |
+| ~~`executableChromium?`~~   | `string`                                           | **Deprecated** |
+| `http?`                     | `boolean`                                          | -              |
+| `image?`                    | `string`                                           | -              |
+| `input?`                    | `string`                                           | -              |
+| `language?`                 | `string`                                           | -              |
+| `logLevel?`                 | `"silent"` \| `"info"` \| `"verbose"` \| `"debug"` | -              |
+| `preflight?`                | `"press-ready"` \| `"press-ready-local"`           | -              |
+| `preflightOption?`          | `string`[]                                         | -              |
+| `pressReady?`               | `boolean`                                          | -              |
+| `proxyServer?`              | `string`                                           | -              |
+| `quick?`                    | `boolean`                                          | -              |
+| `readingProgression?`       | `"ltr"` \| `"rtl"`                                 | -              |
+| `renderMode?`               | `"local"` \| `"docker"`                            | -              |
+| `sandbox?`                  | `boolean`                                          | -              |
+| `singleDoc?`                | `boolean`                                          | -              |
+| `size?`                     | `string`                                           | -              |
+| `style?`                    | `string`                                           | -              |
+| `targets?`                  | `Pick`\<`OutputFormat`, `"path"` \| `"format"`\>[] | -              |
+| `theme?`                    | `string`                                           | -              |
+| `timeout?`                  | `number`                                           | -              |
+| `title?`                    | `string`                                           | -              |
+| `userStyle?`                | `string`                                           | -              |
+| ~~`verbose?`~~              | `boolean`                                          | **Deprecated** |
+| `viewer?`                   | `string`                                           | -              |
+| `viewerParam?`              | `string`                                           | -              |
 
-***
+---
 
 ### InitCliFlags
 
 #### Properties
 
-| Property | Type |
-| ------ | ------ |
-| `author?` | `string` |
-| `language?` | `string` |
+| Property    | Type                                |
+| ----------- | ----------------------------------- |
+| `author?`   | `string`                            |
+| `language?` | `string`                            |
 | `logLevel?` | `"silent"` \| `"info"` \| `"debug"` |
-| `size?` | `string` |
-| `theme?` | `string` |
-| `title?` | `string` |
+| `size?`     | `string`                            |
+| `theme?`    | `string`                            |
+| `title?`    | `string`                            |
 
-***
+---
 
 ### PreviewCliFlags
 
@@ -148,40 +150,41 @@ Open a preview of the publication.
 
 #### Properties
 
-| Property | Type | Description |
-| ------ | ------ | ------ |
-| `author?` | `string` | - |
-| `bleed?` | `string` | - |
-| `browser?` | `"chromium"` \| `"firefox"` \| `"webkit"` | - |
-| `configPath?` | `string` | - |
-| `cropMarks?` | `boolean` | - |
-| `cropOffset?` | `string` | - |
-| `css?` | `string` | - |
-| `executableBrowser?` | `string` | - |
-| ~~`executableChromium?`~~ | `string` | **Deprecated** |
-| `http?` | `boolean` | - |
-| `image?` | `string` | - |
-| `input?` | `string` | - |
-| `language?` | `string` | - |
-| `logLevel?` | `"silent"` \| `"info"` \| `"verbose"` \| `"debug"` | - |
-| `preflight?` | `"press-ready"` \| `"press-ready-local"` | - |
-| `preflightOption?` | `string`[] | - |
-| `pressReady?` | `boolean` | - |
-| `quick?` | `boolean` | - |
-| `readingProgression?` | `"ltr"` \| `"rtl"` | - |
-| `renderMode?` | `"local"` \| `"docker"` | - |
-| `sandbox?` | `boolean` | - |
-| `singleDoc?` | `boolean` | - |
-| `size?` | `string` | - |
-| `style?` | `string` | - |
-| `targets?` | `Pick`\<`OutputFormat`, `"path"` \| `"format"`\>[] | - |
-| `theme?` | `string` | - |
-| `timeout?` | `number` | - |
-| `title?` | `string` | - |
-| `userStyle?` | `string` | - |
-| ~~`verbose?`~~ | `boolean` | **Deprecated** |
-| `viewer?` | `string` | - |
-| `viewerParam?` | `string` | - |
+| Property                  | Type                                               | Description    |
+| ------------------------- | -------------------------------------------------- | -------------- |
+| `author?`                 | `string`                                           | -              |
+| `bleed?`                  | `string`                                           | -              |
+| `browser?`                | `"chromium"` \| `"firefox"` \| `"webkit"`          | -              |
+| `configPath?`             | `string`                                           | -              |
+| `cropMarks?`              | `boolean`                                          | -              |
+| `cropOffset?`             | `string`                                           | -              |
+| `css?`                    | `string`                                           | -              |
+| `executableBrowser?`      | `string`                                           | -              |
+| ~~`executableChromium?`~~ | `string`                                           | **Deprecated** |
+| `http?`                   | `boolean`                                          | -              |
+| `image?`                  | `string`                                           | -              |
+| `input?`                  | `string`                                           | -              |
+| `language?`               | `string`                                           | -              |
+| `logLevel?`               | `"silent"` \| `"info"` \| `"verbose"` \| `"debug"` | -              |
+| `preflight?`              | `"press-ready"` \| `"press-ready-local"`           | -              |
+| `preflightOption?`        | `string`[]                                         | -              |
+| `pressReady?`             | `boolean`                                          | -              |
+| `proxyServer?`            | `string`                                           | -              |
+| `quick?`                  | `boolean`                                          | -              |
+| `readingProgression?`     | `"ltr"` \| `"rtl"`                                 | -              |
+| `renderMode?`             | `"local"` \| `"docker"`                            | -              |
+| `sandbox?`                | `boolean`                                          | -              |
+| `singleDoc?`              | `boolean`                                          | -              |
+| `size?`                   | `string`                                           | -              |
+| `style?`                  | `string`                                           | -              |
+| `targets?`                | `Pick`\<`OutputFormat`, `"path"` \| `"format"`\>[] | -              |
+| `theme?`                  | `string`                                           | -              |
+| `timeout?`                | `number`                                           | -              |
+| `title?`                  | `string`                                           | -              |
+| `userStyle?`              | `string`                                           | -              |
+| ~~`verbose?`~~            | `boolean`                                          | **Deprecated** |
+| `viewer?`                 | `string`                                           | -              |
+| `viewerParam?`            | `string`                                           | -              |
 
 ## Type Aliases
 
@@ -191,18 +194,18 @@ Open a preview of the publication.
 
 #### Type declaration
 
-| Name | Type |
-| ------ | ------ |
-| `children` | [`StructuredDocument`](api-javascript.md#structureddocument)[] |
-| `href` | `string` |
+| Name        | Type                                                                         |
+| ----------- | ---------------------------------------------------------------------------- |
+| `children`  | [`StructuredDocument`](api-javascript.md#structureddocument)[]               |
+| `href`      | `string`                                                                     |
 | `sections`? | [`StructuredDocumentSection`](api-javascript.md#structureddocumentsection)[] |
-| `title` | `string` |
+| `title`     | `string`                                                                     |
 
 #### See
 
 https://github.com/vivliostyle/vivliostyle-cli/blob/main/docs/config.md
 
-***
+---
 
 ### StructuredDocumentSection
 
@@ -210,24 +213,24 @@ https://github.com/vivliostyle/vivliostyle-cli/blob/main/docs/config.md
 
 #### Type declaration
 
-| Name | Type |
-| ------ | ------ |
-| `children` | [`StructuredDocumentSection`](api-javascript.md#structureddocumentsection)[] |
-| `headingHtml` | `string` |
-| `headingText` | `string` |
-| `href`? | `string` |
-| `id`? | `string` |
-| `level` | `number` |
+| Name          | Type                                                                         |
+| ------------- | ---------------------------------------------------------------------------- |
+| `children`    | [`StructuredDocumentSection`](api-javascript.md#structureddocumentsection)[] |
+| `headingHtml` | `string`                                                                     |
+| `headingText` | `string`                                                                     |
+| `href`?       | `string`                                                                     |
+| `id`?         | `string`                                                                     |
+| `level`       | `number`                                                                     |
 
 #### See
 
 https://github.com/vivliostyle/vivliostyle-cli/blob/main/docs/config.md
 
-***
+---
 
 ### VivliostyleConfigSchema
 
-> **VivliostyleConfigSchema**: `v.InferInput`\<*typeof* [`VivliostyleConfigSchema`](api-javascript.md#vivliostyleconfigschema)\>
+> **VivliostyleConfigSchema**: `v.InferInput`\<_typeof_ [`VivliostyleConfigSchema`](api-javascript.md#vivliostyleconfigschema)\>
 
 #### See
 

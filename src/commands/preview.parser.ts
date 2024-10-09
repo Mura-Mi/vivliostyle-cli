@@ -71,6 +71,12 @@ Currently, Firefox and Webkit support preview command only!`,
     )
     .addOption(
       new Option(
+        '--proxy-server <proxyServer>',
+        `proxy server for internal Playwright browser`,
+      ),
+    )
+    .addOption(
+      new Option(
         '--log-level <level>',
         'specify a log level of console outputs',
       )

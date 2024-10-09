@@ -169,6 +169,7 @@ export interface CliFlags {
   viewer?: string;
   viewerParam?: string;
   browser?: 'chromium' | 'firefox' | 'webkit';
+  proxyServer?: string;
   readingProgression?: 'ltr' | 'rtl';
   logLevel?: 'silent' | 'info' | 'verbose' | 'debug';
   /** @deprecated */ executableChromium?: string;
@@ -239,6 +240,7 @@ export type MergedConfig = {
   sandbox: boolean;
   executableBrowser: string;
   browserType: BrowserType;
+  proxyServer: string | undefined;
   image: string;
   httpServer: boolean;
   viewer: string | undefined;
@@ -612,6 +614,11 @@ export async function mergeConfig<T extends CliFlags>(
   const timeout = cliFlags.timeout ?? config?.timeout ?? DEFAULT_TIMEOUT;
   const sandbox = cliFlags.sandbox ?? false;
   const browserType = cliFlags.browser ?? config?.browser ?? 'chromium';
+  const proxyServer: string | undefined =
+    cliFlags.proxyServer ??
+    process.env.HTTP_PROXY ??
+    process.env.HTTPS_PROXY ??
+    undefined;
   const executableBrowser =
     cliFlags.executableBrowser ?? getExecutableBrowserPath(browserType);
   const image = cliFlags.image ?? config?.image ?? CONTAINER_IMAGE;
@@ -810,6 +817,7 @@ export async function mergeConfig<T extends CliFlags>(
     sandbox,
     executableBrowser,
     browserType,
+    proxyServer,
     image,
     httpServer,
     viewer,

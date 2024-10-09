@@ -12,6 +12,7 @@ import {
 
 export async function launchBrowser({
   browserType,
+  proxyServer,
   executablePath,
   headless,
   noSandbox,
@@ -19,6 +20,7 @@ export async function launchBrowser({
   disableDevShmUsage,
 }: {
   browserType: BrowserType;
+  proxyServer: string | undefined;
   executablePath: string;
   headless: boolean;
   noSandbox?: boolean;
@@ -35,6 +37,7 @@ export async function launchBrowser({
             '--allow-file-access-from-files',
             disableWebSecurity ? '--disable-web-security' : '',
             disableDevShmUsage ? '--disable-dev-shm-usage' : '',
+            ...(proxyServer ? [`--proxy-server=${proxyServer}`] : []),
             // set Chromium language to English to avoid locale-dependent issues (e.g. minimum font size)
             '--lang=en',
             ...(!headless && process.platform === 'darwin'

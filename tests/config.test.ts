@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it, vi, onTestFinished } from 'vitest';
 import {
   assertArray,
   assertSingleItem,
@@ -64,6 +64,8 @@ it('override option by CLI command', async () => {
     'myFirefox',
     // '--browser',
     // 'webkit',
+    '--proxy-server',
+    'http://localhost:9000',
     '--style',
     'https://vivlostyle.org',
     '--user-style',
@@ -76,6 +78,17 @@ it('override option by CLI command', async () => {
   ]);
   maskConfig(config);
   expect(config).toMatchSnapshot('valid.1.config.js');
+});
+
+it('override option via environment variable', async () => {
+  vi.stubEnv('HTTPS_PROXY', 'https://localhost:9001');
+  onTestFinished(() => {
+    vi.unstubAllEnvs();
+  });
+
+  const validConfig1 = await getMergedConfig(['-c', configFilePath['valid.1']]);
+  maskConfig(validConfig1);
+  expect(validConfig1).toMatchSnapshot('valid.1.config.js');
 });
 
 it('deny invalid config', () => {

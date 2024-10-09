@@ -85,6 +85,7 @@ export async function buildPDF({
   singleDoc,
   executableBrowser,
   browserType,
+  proxyServer,
   image,
   sandbox,
   timeout,
@@ -130,6 +131,7 @@ export async function buildPDF({
   }
   const browser = await launchBrowser({
     browserType,
+    proxyServer,
     executablePath: executableBrowser,
     headless: true,
     noSandbox: !sandbox,

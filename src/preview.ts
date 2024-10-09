@@ -96,7 +96,7 @@ export async function preview(cliFlags: PreviewCliFlags) {
     quick: config.quick,
   });
 
-  const { browserType, executableBrowser } = config;
+  const { browserType, proxyServer, executableBrowser } = config;
   debug(`Executing browser path: ${executableBrowser}`);
   if (!checkBrowserAvailability(executableBrowser)) {
     if (isPlaywrightExecutable(executableBrowser)) {
@@ -156,6 +156,7 @@ export async function preview(cliFlags: PreviewCliFlags) {
 
     const browser = await launchBrowser({
       browserType,
+      proxyServer,
       executablePath: executableBrowser,
       headless: false,
       noSandbox: !config.sandbox,

@@ -155,6 +155,12 @@ It is useful that using own viewer that has staging features. (ex: https://vivli
     //     )
     .addOption(
       new Option(
+        '--proxy-server <proxyServer>',
+        `proxy server for internal Playwright browser`,
+      ),
+    )
+    .addOption(
+      new Option(
         '--log-level <level>',
         'specify a log level of console outputs',
       )
